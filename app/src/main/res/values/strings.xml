@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">QQ_Chat</string>
+    <string name="login">登录</string>
+    <string name="text">我已阅读并同意</string>
+    <string name="agreement">服务条款</string>
+</resources>

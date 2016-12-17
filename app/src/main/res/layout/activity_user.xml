@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_user"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dwz.edu.sdu.qq_chat.ui.activity.UserActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="0dp"
+        android:background="@color/colorPrimary">
+        <Button
+            android:id="@+id/return1"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@mipmap/qq_return"
+            android:layout_margin="0dp"
+            />
+
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/chat_frame"
+        android:gravity="center"/>
+    <FrameLayout
+        android:id="@+id/chat_frame"
+        android:layout_below="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/send_line">
+        <ListView
+            android:id="@+id/chat_line"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:transcriptMode="alwaysScroll">
+
+        </ListView>
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/send_line"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <EditText
+            android:id="@+id/send_frame"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#ffffff"
+            />
+        <Button
+            android:id="@+id/send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="发送"
+            android:background="@color/login_button" />
+    </LinearLayout>
+
+</RelativeLayout>
